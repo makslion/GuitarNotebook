@@ -25,4 +25,5 @@
 
 
     <string name="songButton">Song</string>
+    <string name="chordImageDescription">chord applicature</string>
 </resources>

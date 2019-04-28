@@ -11,10 +11,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-
 public class Drawer_layout extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     private DrawerLayout drawer;
+
+    private Chords chordsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -43,6 +44,7 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
 
             setFragment(message);
             navigationView.setCheckedItem(message);
+
     }
 
     @Override
