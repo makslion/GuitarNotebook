@@ -4,6 +4,7 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 @Entity (tableName = "chords_table")
 public class ChordEntity
@@ -36,9 +37,7 @@ public class ChordEntity
 
 
     @NonNull
-    String getChordAddress() {
-        return chordAddress;
-    }
+    String getChordAddress() { return chordAddress; }
 
     @NonNull
     String getChordName() {

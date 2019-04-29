@@ -12,9 +12,6 @@ public class ChordViewModel extends AndroidViewModel
 {
     private Repository repository;
 
-    //private LiveData<List<ChordEntity>> chordList;
-    //private LiveData<String> chordAddress;
-
 
 
     public ChordViewModel(@NonNull Application application)

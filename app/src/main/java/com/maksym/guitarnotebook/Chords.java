@@ -1,5 +1,6 @@
 package com.maksym.guitarnotebook;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -38,7 +39,6 @@ public class Chords extends Fragment
         RecyclerView fChords = view.findViewById(R.id.fChordsList);
         RecyclerView gChords = view.findViewById(R.id.gChordsList);
 
-
         final ChordsAdapter adapterA = new ChordsAdapter(view.getContext());
         final ChordsAdapter adapterB = new ChordsAdapter(view.getContext());
         final ChordsAdapter adapterC = new ChordsAdapter(view.getContext());
@@ -62,6 +62,8 @@ public class Chords extends Fragment
         eChords.setLayoutManager(new LinearLayoutManager(view.getContext()));
         fChords.setLayoutManager(new LinearLayoutManager(view.getContext()));
         gChords.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+
 
 
         // Get a new or existing ViewModel from the ViewModelProvider.
@@ -91,8 +93,6 @@ public class Chords extends Fragment
         chordViewModel.getChordList('G').observe(this, chords ->
                 // Update the cached copy of the chords in the adapter.
                 adapterG.setChords(chords));
-
-        Log.d("testing1",chordViewModel.getChordList('A').toString());
 
         return view;
     }

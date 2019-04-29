@@ -10,8 +10,6 @@ import java.util.List;
 public class Repository
 {
     private ChordDAO chordDAO;
-    //private LiveData<List<ChordEntity>> chordList;
-    //private LiveData<String> chordAddress;
 
 
 
