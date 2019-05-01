@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chordsScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="A"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -36,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="B"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -46,11 +49,12 @@
             tools:listitem="@layout/chord_listitem" />
 
         <TextView
-            android:id="@+id/cChordsLabel2"
+            android:id="@+id/cChordsLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="C"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -61,11 +65,12 @@
             tools:listitem="@layout/chord_listitem" />
 
         <TextView
-            android:id="@+id/dChordsLabel3"
+            android:id="@+id/dChordsLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="D"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -76,11 +81,12 @@
             tools:listitem="@layout/chord_listitem" />
 
         <TextView
-            android:id="@+id/eChordsLabel4"
+            android:id="@+id/eChordsLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="E"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -91,11 +97,12 @@
             tools:listitem="@layout/chord_listitem" />
 
         <TextView
-            android:id="@+id/fChordsLabel5"
+            android:id="@+id/fChordsLabel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:text="F"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -106,11 +113,12 @@
             tools:listitem="@layout/chord_listitem" />
 
         <TextView
-            android:id="@+id/gChordsLabel6"
+            android:id="@+id/gChordsLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="G"
+            android:textColor="@color/design_default_color_primary_dark"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView

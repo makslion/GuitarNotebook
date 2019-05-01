@@ -5,6 +5,7 @@ import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -24,6 +25,7 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
             {
                 if (INSTANCE == null)
                 {
+
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             GuitarRoomDatabase.class, "word_database")
                             // Wipes and rebuilds instead of migrating
@@ -48,11 +50,20 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
     private static RoomDatabase.Callback roomDatabaseCallback = new RoomDatabase.Callback(){
 
         @Override
-        public void onOpen (@NonNull SupportSQLiteDatabase db){
-            super.onOpen(db);
+        public void onCreate (@NonNull SupportSQLiteDatabase db)
+        {
+            super.onCreate(db);
             // If you want to keep the data through app restarts,
             // comment out the following line.
             new PopulateDbAsync(INSTANCE).execute();
+            Log.d("RoomDatabase", "On create db");
+        }
+
+        @Override
+        public void onOpen(@NonNull SupportSQLiteDatabase db)
+        {
+            super.onOpen(db);
+            Log.d("RoomDatabase", "On open db");
         }
     };
 
@@ -111,6 +122,7 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
             // Not needed if you only populate on creation.
             chordDAO.deleteAll();
 
+            Log.d("RoomDatabse", "Populating database");
             for( int i = 0; i < chords.length; i++)
             {
                 for (int j = 0; j< chords[i].length; j++)

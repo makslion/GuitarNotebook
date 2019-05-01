@@ -30,7 +30,6 @@ public class Chord extends AppCompatActivity
     private ChordViewModel chordViewModel;
 
     public static final String EXTRA_CHORD_NAME = "ChordName";
-    public static final String EXTRA_CHORD_ADDRESS = "ChordAddress";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,6 +60,7 @@ public class Chord extends AppCompatActivity
                 @Override
                 public void onChanged(@Nullable String s) {
                     new DownLoadImageTask(chordImage).execute(s);
+                    Log.d("Chord", s);
                 }
             });
         }
