@@ -31,6 +31,10 @@ public class Repository
         return chordDAO.getChordAddress(chordName);
     }
 
+    public LiveData<List<ChordEntity>> getChord (String chordName)
+    {
+        return  chordDAO.getChord(chordName);
+    }
 
 
     public void insert (ChordEntity chord)

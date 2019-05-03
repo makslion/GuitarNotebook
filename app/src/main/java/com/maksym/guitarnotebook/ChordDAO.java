@@ -21,4 +21,7 @@ public interface ChordDAO
 
     @Query("DELETE FROM chords_table")
     void deleteAll();
+
+    @Query("SELECT * FROM chords_table WHERE chordName = :chordName")
+    LiveData<List<ChordEntity>> getChord(String chordName);
 }

@@ -33,6 +33,11 @@ public class ChordViewModel extends AndroidViewModel
         return repository.getChordAddress(chordName);
     }
 
+    public LiveData<List<ChordEntity>> getChord(String chordName)
+    {
+        return  repository.getChord(chordName);
+    }
+
 
     public void insert (ChordEntity chord)
     {

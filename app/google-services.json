@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "659094739148",
+    "firebase_url": "https://guitarnotebook-e8a35.firebaseio.com",
+    "project_id": "guitarnotebook-e8a35",
+    "storage_bucket": "guitarnotebook-e8a35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659094739148:android:9502ce0044706cf4",
+        "android_client_info": {
+          "package_name": "com.maksym.guitarnotebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659094739148-dn50qs6edde2qetnet82ha381kq0nhou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.maksym.guitarnotebook",
+            "certificate_hash": "c4f524f01fcb3af66aa860161e1a64843b9bef19"
+          }
+        },
+        {
+          "client_id": "659094739148-20rcqo4v6j6clj6id4vcj604ocl14r3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnLZejBVVvVLSJrrE0XK36fS5cioveGN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659094739148-20rcqo4v6j6clj6id4vcj604ocl14r3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

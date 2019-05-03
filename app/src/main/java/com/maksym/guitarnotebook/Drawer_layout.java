@@ -11,11 +11,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Drawer_layout extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     private DrawerLayout drawer;
-
-    private Chords chordsFragment;
+    private DatabaseReference firebaseSongs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,6 +38,8 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
 
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        firebaseSongs = FirebaseDatabase.getInstance().getReference("Songs");
 
         Intent intent = getIntent();
         int message = R.id.nav_songs;
@@ -144,4 +149,9 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
         Intent intent = new Intent(this, Artists.class);
         startActivity(intent);
     }
+
+
+
+
+    public DatabaseReference getFirebaseSongs() { return firebaseSongs; }
 }

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/numberDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_margin="15dp"
+        android:text="#"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/aDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_margin="15dp"
+        android:text="A"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/bDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_margin="15dp"
+        android:text="B"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/cDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:layout_margin="15dp"
+        android:text="C"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/dDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="4"
+        android:layout_margin="15dp"
+        android:text="D"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/eDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_margin="15dp"
+        android:text="E"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/fDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_margin="15dp"
+        android:text="F"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/gDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_margin="15dp"
+        android:text="G"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/hDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:layout_margin="15dp"
+        android:text="H"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/iDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:layout_margin="15dp"
+        android:text="I"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/jDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_margin="15dp"
+        android:text="J"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/kDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_margin="15dp"
+        android:text="K"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:layout_margin="15dp"
+        android:text="L"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/mDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:layout_margin="15dp"
+        android:text="M"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/nDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="4"
+        android:layout_margin="15dp"
+        android:text="N"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/oDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_margin="15dp"
+        android:text="O"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/pDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_margin="15dp"
+        android:text="P"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/qDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:layout_margin="15dp"
+        android:text="Q"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/rDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="3"
+        android:layout_margin="15dp"
+        android:text="R"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/sDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="4"
+        android:layout_margin="15dp"
+        android:text="S"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_margin="15dp"
+        android:text="T"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/uDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_margin="15dp"
+        android:text="U"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/vDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_margin="15dp"
+        android:text="V"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/wDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:layout_margin="15dp"
+        android:text="W"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/xDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="4"
+        android:layout_margin="15dp"
+        android:text="X"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/yDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_margin="15dp"
+        android:text="Y"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/zDialogLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="3"
+        android:layout_margin="15dp"
+        android:text="Z"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
+
+</GridLayout>
