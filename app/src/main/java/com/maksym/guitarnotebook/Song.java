@@ -1,5 +1,6 @@
 package com.maksym.guitarnotebook;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,6 +13,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -47,11 +51,19 @@ public class Song extends Fragment
     private SongChordsAdatper adapter;
     private List<ChordEntity> chordEntities;
 
+    private MenuItem collectionMI;
+    private boolean songInCollection;
+
+    private SongViewModel songViewModel;
+    private List<SongModel> songs;
+    private static String strSeparator = "__,__";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_song, container, false);
+        setHasOptionsMenu(true);
 
         //default
         video_id = "pwUu5MrARtU";
@@ -64,6 +76,8 @@ public class Song extends Fragment
         firebaseSongs = FirebaseDatabase.getInstance().getReference("Songs");
 
         Intent intent = getActivity().getIntent();
+
+
         if (intent.hasExtra(Songs.EXTRA_SONG_ARTIST) &&
                 intent.hasExtra(Songs.EXTRA_SONG_NAME))
         {
@@ -71,6 +85,30 @@ public class Song extends Fragment
             songArtist = intent.getStringExtra(Songs.EXTRA_SONG_ARTIST);
 
         }
+
+        songViewModel = ViewModelProviders.of(this).get(SongViewModel.class);
+        songs = new ArrayList<>();
+
+        songViewModel.getSong(songName, songArtist).observe(this, new Observer<List<SongEntity>>() {
+            @Override
+            public void onChanged(@Nullable List<SongEntity> songEntities)
+            {
+                for (SongEntity songEntity : songEntities)
+                {
+                    songs.add(new SongModel(
+                            songEntity.getSongName(),
+                            songEntity.getSongGenre(),
+                            songEntity.getSongArtist(),
+                            convertStringToArray(songEntity.getSongChords()),
+                            songEntity.getSongLyrics(),
+                            songEntity.getSongExample()));
+
+
+                }
+
+                songInCollection = !songs.isEmpty();
+            }
+        });
 
         findReferences(view);
 
@@ -85,7 +123,87 @@ public class Song extends Fragment
         loadSong();
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
+    {
+        super.onCreateOptionsMenu(menu, inflater);
+        Log.d("Song", "on create option menu");
 
+        inflater.inflate(R.menu.favorite_menu, menu);
+
+        collectionMI = menu.findItem(R.id.collectionMI);
+        setCollectionButton();
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if(id == R.id.collectionMI)
+        {
+            collectionButtonActed();
+            Log.d("Song", "favorite button action");
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+    private void setCollectionButton()
+    {
+        if(songInCollection)
+        {
+            collectionMI.setTitle("Remove from Collection");
+            collectionMI.setIcon(R.drawable.ic_collection_filled);
+
+
+        }
+        else
+        {
+            collectionMI.setTitle("Add to Collection");
+            collectionMI.setIcon(R.drawable.ic_collection_empty);
+        }
+    }
+
+
+
+    private void collectionButtonActed()
+    {
+        if(songInCollection)
+        {
+            songViewModel.deleeteSong(new SongEntity(
+                    song.getSongArtist(),
+                    convertArrayToString(song.getSongChords()),
+                    song.getSongExample(),
+                    song.getSongGenre(),
+                    song.getSongLyrics(),
+                    song.getSongName()));
+
+            songInCollection = false;
+            Toast toast = Toast.makeText(getContext(), "Removed from collection", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else
+        {
+            songViewModel.insert(new SongEntity(
+                    song.getSongArtist(),
+                    convertArrayToString(song.getSongChords()),
+                    song.getSongExample(),
+                    song.getSongGenre(),
+                    song.getSongLyrics(),
+                    song.getSongName()));
+
+            songInCollection = true;
+            Toast toast = Toast.makeText(getContext(), "Added to collection", Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+        setCollectionButton();
+    }
 
     private void findReferences(View view)
     {
@@ -109,32 +227,37 @@ public class Song extends Fragment
 
     private void loadSong()
     {
-        firebaseSongs.addValueEventListener(new ValueEventListener()
+        if (!songInCollection)
         {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-            {
-                for (DataSnapshot songSnapshot : dataSnapshot.getChildren())
-                {
-                    //Log.d("Song", "Gathering song");
-                    SongModel temp = songSnapshot.getValue(SongModel.class);
+            firebaseSongs.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot songSnapshot : dataSnapshot.getChildren()) {
+                        //Log.d("Song", "Gathering song");
+                        SongModel temp = songSnapshot.getValue(SongModel.class);
 
-                    if (temp.getSongName().equals(songName) && temp.getSongArtist().equals(songArtist))
-                    {
-                        song = temp;
-                        //Log.d("Song", "Gathered song name "+ song.getSongName());
-                        loadChords();
+                        if (temp.getSongName().equals(songName) && temp.getSongArtist().equals(songArtist)) {
+                            song = temp;
+                            //Log.d("Song", "Gathered song name "+ song.getSongName());
+                            loadChords();
+                        }
+
                     }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError)
+            });
+        }
+        else
             {
-
+                song = songs.get(0); //result of query should be single song. If no - load first occurrence. More then one if there is songs with the same name and the dame artist
+                loadChords(); //keep inside brackets. If song not in collection it takes time to load. If in collection by this tine already loaded
             }
-        });
+
+
     }
 
 
@@ -155,6 +278,7 @@ public class Song extends Fragment
                     player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
                     player.cueVideo(video_id);
                 }
+                //loadChords();
             }
 
             @Override
@@ -201,6 +325,28 @@ public class Song extends Fragment
 
         chordRecycler.setAdapter(adapter);
         adapter.setChords(chordEntities);
+    }
+
+
+
+    private static String convertArrayToString(List<String> stringList) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String str : stringList) {
+            stringBuilder.append(str).append(strSeparator);
+        }
+
+        // Remove last separator
+        stringBuilder.setLength(stringBuilder.length() - strSeparator.length());
+
+        return stringBuilder.toString();
+    }
+
+
+
+    private static String[] convertStringToArray(String str)
+    {
+        String[] arr = str.split(strSeparator);
+        return arr;
     }
 
 }

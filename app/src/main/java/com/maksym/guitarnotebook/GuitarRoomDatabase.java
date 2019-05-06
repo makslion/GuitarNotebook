@@ -11,10 +11,11 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 
-@Database(entities = {ChordEntity.class}, version = 1, exportSchema = false)
+@Database(entities = {ChordEntity.class, SongEntity.class}, version = 2, exportSchema = false)
 public abstract class GuitarRoomDatabase extends RoomDatabase
 {
     public abstract ChordDAO chordDAO();
+    public abstract SongDAO songDAO();
     private static GuitarRoomDatabase INSTANCE;
 
     static GuitarRoomDatabase getDatabase(final Context context)
@@ -64,6 +65,10 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
         {
             super.onOpen(db);
             Log.d("RoomDatabase", "On open db");
+
+            // If you want to keep the data through app restarts,
+            // comment out the following line.
+            //new PopulateDbAsync(INSTANCE).execute();
         }
     };
 
@@ -74,6 +79,7 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
         private final ChordDAO chordDAO;
+        private final SongDAO songDAO;
 
         //sample data
         private String [] chordA = {"A", "https://www.theguitarlesson.com/wp-content/uploads/chords/Amaj-chord1.jpg", "A"};
@@ -113,6 +119,7 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
         PopulateDbAsync(GuitarRoomDatabase db)
         {
             chordDAO = db.chordDAO();
+            songDAO = db.songDAO();
         }
 
         @Override
@@ -121,6 +128,7 @@ public abstract class GuitarRoomDatabase extends RoomDatabase
             // Start the app with a clean database every time.
             // Not needed if you only populate on creation.
             chordDAO.deleteAll();
+            songDAO.deleteAll();
 
             Log.d("RoomDatabse", "Populating database");
             for( int i = 0; i < chords.length; i++)

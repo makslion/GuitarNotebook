@@ -111,7 +111,6 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
         }
 
         drawer.closeDrawer(GravityCompat.START);
-
     }
 
     public void toAbout(View view)
@@ -119,39 +118,4 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
         Intent it = new Intent(this, About.class);
         startActivity(it);
     }
-
-
-    public void toChord(View view)
-    {
-        Intent it = new Intent(this, Chord.class);
-        startActivity(it);
-    }
-
-
-
-
-    public void byNamePressed(View view)
-    {
-        Intent intent = new Intent(this, Songs.class);
-        startActivity(intent);
-    }
-
-
-    public void byGenrePressed(View view)
-    {
-        Intent intent = new Intent(this, Genres.class);
-        startActivity(intent);
-    }
-
-
-    public void byArtistPressed(View view)
-    {
-        Intent intent = new Intent(this, Artists.class);
-        startActivity(intent);
-    }
-
-
-
-
-    public DatabaseReference getFirebaseSongs() { return firebaseSongs; }
 }
