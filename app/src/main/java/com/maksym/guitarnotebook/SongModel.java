@@ -18,7 +18,8 @@ public class SongModel
 
     public SongModel() {}
 
-    public SongModel(String songName, String songGenre, String songArtist, String [] songChords, String songLyrics, String songExample)
+    public SongModel(String songName, String songGenre, String songArtist, String [] songChords,
+                     String songLyrics, String songExample)
     {
         this.SongName = songName;
         this.SongGenre = songGenre;

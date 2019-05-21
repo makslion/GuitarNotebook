@@ -38,7 +38,9 @@ public class SongEntity
     private String songName;
 
 
-    public SongEntity(@NonNull String songArtist, @NonNull String songChords, @NonNull String songExample, @NonNull String songGenre, @NonNull String songLyrics, @NonNull String songName)
+    public SongEntity(@NonNull String songArtist, @NonNull String songChords,
+                      @NonNull String songExample, @NonNull String songGenre,
+                      @NonNull String songLyrics, @NonNull String songName)
     {
         this.songArtist = songArtist;
         this.songChords = songChords;

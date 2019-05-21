@@ -65,7 +65,6 @@ public class Chord extends AppCompatActivity
             });
         }
 
-
     }
 
     //implement up button action
