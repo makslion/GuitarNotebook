@@ -23,6 +23,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+//class  for Chord activity
 public class Chord extends AppCompatActivity
 {
     private TextView chordName;
@@ -30,6 +31,7 @@ public class Chord extends AppCompatActivity
     private ChordViewModel chordViewModel;
 
     public static final String EXTRA_CHORD_NAME = "ChordName";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -66,6 +68,8 @@ public class Chord extends AppCompatActivity
         }
 
     }
+
+
 
     //implement up button action
     @Override

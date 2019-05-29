@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+//class for list of genres to apply filter for songs
 public class Genres extends AppCompatActivity
 {
     private DatabaseReference firebaseSongs;
@@ -31,6 +32,8 @@ public class Genres extends AppCompatActivity
     private RecyclerView[] genresRecyclers;
     private ScrollView scrollView;
     private List<String> genres;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

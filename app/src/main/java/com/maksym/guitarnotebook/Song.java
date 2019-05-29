@@ -7,7 +7,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -33,9 +32,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//Activity to display song
 public class Song extends Fragment
 {
-
+    //key should be moved from here
     public static final String API_KEY = "AIzaSyCWnbijsmEsQX6RuqBZ4KSkaqANl5JNZms";
     private String video_id;
     private SongModel song;
@@ -56,6 +57,8 @@ public class Song extends Fragment
     private SongViewModel songViewModel;
     private List<SongModel> songs;
     private static String strSeparator = "__,__";
+
+
 
     @Nullable
     @Override
@@ -114,6 +117,8 @@ public class Song extends Fragment
         return view;
     }
 
+
+
     @Override
     public void onStart()
     {
@@ -121,6 +126,8 @@ public class Song extends Fragment
         Log.d("Song", "on start");
         loadSong();
     }
+
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
@@ -203,6 +210,8 @@ public class Song extends Fragment
 
         setCollectionButton();
     }
+
+
 
     private void findReferences(View view)
     {
@@ -299,6 +308,9 @@ public class Song extends Fragment
 
         for (String chord : song.getSongChords())
         {
+            if (chord.endsWith("b"))
+                chord = Character.toString(chord.charAt(0));
+
             Log.d("Song", "Looking for chord "+chord);
             chordViewModel.getChord(chord).observe(this, chords ->
                     // Update the cached copy of the chords in the adapter.

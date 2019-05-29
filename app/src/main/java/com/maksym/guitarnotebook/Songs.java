@@ -24,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//List of songs. Activity. Expecting filters from Artists and Genres
 public class Songs extends AppCompatActivity
 {
     private DatabaseReference firebaseSongs;
@@ -40,6 +42,7 @@ public class Songs extends AppCompatActivity
 
     //things for querying
     private Intent incomingIntent;
+
 
 
     @Override
@@ -64,6 +67,7 @@ public class Songs extends AppCompatActivity
             getSupportActionBar().setTitle("Songs");
         }
     }
+
 
 
     @Override
@@ -101,6 +105,7 @@ public class Songs extends AppCompatActivity
         };
 
 
+        //filters from Genres and Artists
         if (incomingIntent.hasExtra(EXTRA_SONG_ARTIST_FILTER))
         {
             Query query = firebaseSongs.
@@ -119,10 +124,9 @@ public class Songs extends AppCompatActivity
         }
         else    //no filter
             firebaseSongs.addValueEventListener(listener);
-
-
-
     }
+
+
 
     //implement up button action
     @Override

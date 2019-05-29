@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+//unimplemented additional feature.
 public class Metronome extends Fragment
 {
 

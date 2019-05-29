@@ -17,6 +17,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//class for fragment_collection.xml
 public class Collection extends Fragment
 {
     private View view;
@@ -27,6 +29,7 @@ public class Collection extends Fragment
     private List<SongModel> songs;
 
     private static String strSeparator = "__,__";
+
 
     @Nullable
     @Override

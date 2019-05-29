@@ -24,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+//list of all artists. Used to implement filter to Songs
 public class Artists extends AppCompatActivity
 {
     private DatabaseReference firebaseSongs;
@@ -32,6 +33,8 @@ public class Artists extends AppCompatActivity
     private RecyclerView[] artistsRecyclers;
     private ScrollView scrollView;
     private List<String> artists;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -52,6 +55,7 @@ public class Artists extends AppCompatActivity
         artists = new ArrayList<>();
         firebaseSongs = FirebaseDatabase.getInstance().getReference("Songs");
     }
+
 
 
     @Override
@@ -94,6 +98,8 @@ public class Artists extends AppCompatActivity
 
         firebaseSongs.addValueEventListener(listener);
     }
+
+
 
     //implement up button action
     @Override

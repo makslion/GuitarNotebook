@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+
+//adapter for recyclers in Genres
 public class GenresAdapter extends RecyclerView.Adapter <GenresAdapter.GenresViewHolder>
 {
     public class GenresViewHolder extends RecyclerView.ViewHolder
@@ -56,6 +58,8 @@ public class GenresAdapter extends RecyclerView.Adapter <GenresAdapter.GenresVie
 
         return new GenresAdapter.GenresViewHolder(itemView);
     }
+
+
 
     @Override
     public void onBindViewHolder(GenresAdapter.GenresViewHolder genresViewHolder, int i)

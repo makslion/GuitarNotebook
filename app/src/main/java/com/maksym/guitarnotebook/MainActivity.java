@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+
+//main menu that appears only in start of application. Later replaced with drawer
 public class MainActivity extends AppCompatActivity
 {
     public static final String EXTRA_MESSAGE = "FragmentId";

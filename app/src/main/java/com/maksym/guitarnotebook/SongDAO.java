@@ -7,6 +7,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
+//SQLite thing. Song data access object for song table
 @Dao
 public interface SongDAO
 {

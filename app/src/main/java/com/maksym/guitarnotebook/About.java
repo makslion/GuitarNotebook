@@ -6,7 +6,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
-public class About extends AppCompatActivity {
+//About activity
+public class About extends AppCompatActivity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,6 +23,8 @@ public class About extends AppCompatActivity {
             getSupportActionBar().setTitle("About");
         }
     }
+
+
 
     //implement up button action
     @Override

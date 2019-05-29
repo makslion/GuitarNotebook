@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//adapter for recycler in Artists
 public class ArtistsAdapter  extends RecyclerView.Adapter <ArtistsAdapter.ArtistViewHolder>
 {
     public class ArtistViewHolder extends RecyclerView.ViewHolder
@@ -29,10 +30,14 @@ public class ArtistsAdapter  extends RecyclerView.Adapter <ArtistsAdapter.Artist
     private final LayoutInflater inflater;
     private List<String> artists;
 
+
+
     public ArtistsAdapter(Context context)
     {
         inflater = LayoutInflater.from(context);
     }
+
+
 
     @NonNull
     @Override
@@ -56,6 +61,8 @@ public class ArtistsAdapter  extends RecyclerView.Adapter <ArtistsAdapter.Artist
 
         return new ArtistsAdapter.ArtistViewHolder(itemView);
     }
+
+
 
     @Override
     public void onBindViewHolder(ArtistsAdapter.ArtistViewHolder artistViewHolder, int i)

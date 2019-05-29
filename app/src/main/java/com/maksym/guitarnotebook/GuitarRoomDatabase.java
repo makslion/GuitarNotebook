@@ -10,7 +10,7 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-
+//SQLite database with sample data for chords
 @Database(entities = {ChordEntity.class, SongEntity.class}, version = 2, exportSchema = false)
 public abstract class GuitarRoomDatabase extends RoomDatabase
 {

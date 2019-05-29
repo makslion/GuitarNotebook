@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
+
+//SQLite thing for accessing songs in Collection
 public class SongViewModel extends AndroidViewModel
 {
     private Repository repository;

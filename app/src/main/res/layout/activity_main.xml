@@ -12,6 +12,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:srcCompat="@drawable/guitar" />
+
     <Button
         android:id="@+id/toCollectionButton"
         android:layout_width="match_parent"
@@ -19,7 +27,8 @@
         android:layout_marginBottom="10dp"
         android:onClick="toCollection"
         android:text="@string/collectionButton"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="?android:attr/colorBackground" />
 
     <Button
         android:id="@+id/toSongsButton"
@@ -28,7 +37,8 @@
         android:layout_marginBottom="10dp"
         android:onClick="toSongs"
         android:text="@string/songsButton"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="?android:attr/colorBackground" />
 
     <Button
         android:id="@+id/toChordsButton"
@@ -37,7 +47,8 @@
         android:layout_marginBottom="10dp"
         android:onClick="toChords"
         android:text="@string/chordsButton"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="?android:attr/colorBackground" />
 
     <Button
         android:id="@+id/toTunerButton"
@@ -46,7 +57,8 @@
         android:layout_marginBottom="10dp"
         android:onClick="toTuner"
         android:text="@string/tunerButton"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="?android:attr/colorBackground" />
 
     <Button
         android:id="@+id/toMetronomeButton"
@@ -55,7 +67,8 @@
         android:layout_marginBottom="10dp"
         android:onClick="toMetronome"
         android:text="@string/metronomeButton"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="?android:attr/colorBackground" />
 
     <ImageView
         android:id="@+id/settingsImage"

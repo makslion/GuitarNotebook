@@ -8,6 +8,7 @@ import android.util.Log;
 
 import java.util.List;
 
+//SQLite thing for work with chords
 public class ChordViewModel extends AndroidViewModel
 {
     private Repository repository;

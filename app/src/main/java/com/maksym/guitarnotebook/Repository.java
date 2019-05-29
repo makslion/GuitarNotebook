@@ -7,6 +7,8 @@ import android.util.Log;
 
 import java.util.List;
 
+
+//repo for work with SQLite database
 public class Repository
 {
     private ChordDAO chordDAO;

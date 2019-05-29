@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/*
+unimplemented feature. Tuner should be put here. There is link to code, that could be here
+in Final Report at Appendix, Project extensions 1 (link to GitHub with open source
+ */
+
 public class Tuner extends Fragment
 {
 

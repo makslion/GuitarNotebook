@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="A"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="B"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="C"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="D"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="E"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -102,7 +102,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:text="F"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="G"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView

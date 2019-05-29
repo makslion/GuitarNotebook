@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="#"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp"
             android:visibility="visible" />
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="A"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="B"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="C"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="D"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="E"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="F"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="G"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -143,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="H"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -158,7 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="I"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="J"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -188,7 +188,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="K"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -203,7 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="L"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -218,7 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="M"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -233,7 +233,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="N"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -248,7 +248,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="O"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -263,7 +263,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="P"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -278,7 +278,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Q"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -293,7 +293,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="R"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -308,7 +308,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="S"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -323,7 +323,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="T"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -338,7 +338,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="U"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -353,7 +353,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="V"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -368,7 +368,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="W"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -383,7 +383,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="X"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -398,7 +398,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Y"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
@@ -413,7 +413,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Z"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="?attr/colorAccent"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView

@@ -1,6 +1,6 @@
 package com.maksym.guitarnotebook;
 
-
+//sample songs data used for insertion into Firebase
 public final class SongsSampleData
 {
     private final static String song1Name = "One Of Us";

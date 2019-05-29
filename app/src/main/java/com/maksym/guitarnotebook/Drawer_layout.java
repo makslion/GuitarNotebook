@@ -15,10 +15,13 @@ import android.view.View;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
+//drawer activity
 public class Drawer_layout extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     private DrawerLayout drawer;
     private DatabaseReference firebaseSongs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -52,6 +55,8 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
 
     }
 
+
+
     @Override
     public void onBackPressed()
     {
@@ -60,6 +65,8 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
         else
             super.onBackPressed();
     }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
@@ -112,6 +119,8 @@ public class Drawer_layout extends AppCompatActivity implements NavigationView.O
 
         drawer.closeDrawer(GravityCompat.START);
     }
+
+
 
     public void toAbout(View view)
     {

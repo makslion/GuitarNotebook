@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="A"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="B"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="C"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="D"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="E"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="F"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 
     <TextView
@@ -66,6 +66,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="G"
-        android:textColor="#FFFFFF"
+        android:textColor="?attr/colorAccent"
         android:textSize="24sp" />
 </LinearLayout>

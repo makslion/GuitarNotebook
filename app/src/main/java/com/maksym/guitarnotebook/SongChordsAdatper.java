@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
+//adapter for chord recycler in song activity
 public class SongChordsAdatper extends RecyclerView.Adapter <SongChordsAdatper.ChordViewHolder>
 {
 
@@ -50,6 +51,8 @@ public class SongChordsAdatper extends RecyclerView.Adapter <SongChordsAdatper.C
         inflater = LayoutInflater.from(context);
     }
 
+
+
     @Override
     public SongChordsAdatper.ChordViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
@@ -69,6 +72,8 @@ public class SongChordsAdatper extends RecyclerView.Adapter <SongChordsAdatper.C
         return new SongChordsAdatper.ChordViewHolder(itemView);
     }
 
+
+
     @Override
     public void onBindViewHolder(SongChordsAdatper.ChordViewHolder holder, int position)
     {
@@ -79,11 +84,15 @@ public class SongChordsAdatper extends RecyclerView.Adapter <SongChordsAdatper.C
 
     }
 
+
+
     void setChords(List<ChordEntity> chords)
     {
         this.chords = chords;
         notifyDataSetChanged();
     }
+
+
 
     // getItemCount() is called many times, and when it is first called,
     // chords has not been updated (means initially, it's null, and we can't return null).

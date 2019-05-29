@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//adapter for recyclers in Chords list
 public class ChordsAdapter extends RecyclerView.Adapter <ChordsAdapter.ChordViewHolder>
 {
 
@@ -56,6 +57,8 @@ public class ChordsAdapter extends RecyclerView.Adapter <ChordsAdapter.ChordView
         return new ChordViewHolder(itemView);
     }
 
+
+
     @Override
     public void onBindViewHolder(ChordViewHolder holder, int position)
     {
@@ -68,6 +71,8 @@ public class ChordsAdapter extends RecyclerView.Adapter <ChordsAdapter.ChordView
         this.chords = chords;
         notifyDataSetChanged();
     }
+
+
 
     // getItemCount() is called many times, and when it is first called,
     // chords has not been updated (means initially, it's null, and we can't return null).

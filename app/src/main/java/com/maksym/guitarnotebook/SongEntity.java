@@ -6,6 +6,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+
+//SQLite thing. Table for song storage
 @Entity(tableName = "songs_table")
 public class SongEntity
 {

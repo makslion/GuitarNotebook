@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+
+//Adapter for list of songs in Songs
 public class SongsAdapter extends RecyclerView.Adapter <SongsAdapter.SongViewHolder>
 {
     public class SongViewHolder extends RecyclerView.ViewHolder
@@ -32,10 +34,13 @@ public class SongsAdapter extends RecyclerView.Adapter <SongsAdapter.SongViewHol
     private final LayoutInflater inflater;
     private List<SongModel> songList;
 
+
     public SongsAdapter(Context context)
     {
         inflater = LayoutInflater.from(context);
     }
+
+
 
     @NonNull
     @Override
@@ -62,6 +67,8 @@ public class SongsAdapter extends RecyclerView.Adapter <SongsAdapter.SongViewHol
 
         return new SongsAdapter.SongViewHolder(itemView);
     }
+
+
 
     @Override
     public void onBindViewHolder(SongViewHolder songViewHolder, int i)

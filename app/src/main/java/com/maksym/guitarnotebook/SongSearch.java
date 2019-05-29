@@ -15,6 +15,7 @@ import android.widget.Button;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+//Fragment where user can chose between songs list, Genres and Artists
 public class SongSearch extends Fragment
 {
     private DatabaseReference firebaseSongs;
@@ -22,6 +23,7 @@ public class SongSearch extends Fragment
     private CardView byNameCard;
     private CardView byGenreCard;
     private CardView byArtistCard;
+
 
     @Nullable
     @Override
@@ -41,6 +43,8 @@ public class SongSearch extends Fragment
         return view;
     }
 
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -51,6 +55,8 @@ public class SongSearch extends Fragment
         //putSampleData();
     }
 
+
+
     @Override
     public void onStart()
     {
@@ -58,6 +64,8 @@ public class SongSearch extends Fragment
         Log.d("SongSearch", "on start");
 
     }
+
+
 
     public void byNamePressed()
     {

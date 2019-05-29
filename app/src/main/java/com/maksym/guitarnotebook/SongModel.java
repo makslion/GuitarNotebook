@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+//Firebase thing. Class used to interpret data from Firebase and insert data into database(insertion should be removed)
 public class SongModel
 {
     private String SongName;
@@ -16,7 +18,11 @@ public class SongModel
     private String SongLyrics;
     private String SongExample;
 
+
+
     public SongModel() {}
+
+
 
     public SongModel(String songName, String songGenre, String songArtist, String [] songChords,
                      String songLyrics, String songExample)
@@ -67,6 +73,8 @@ public class SongModel
     public void setSongExample(String songExample) {
         this.SongExample = songExample;
     }
+
+
 
     @Exclude //used to push object to firebase
     public Map<String, Object> toMap()

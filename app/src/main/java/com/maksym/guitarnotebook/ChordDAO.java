@@ -7,6 +7,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
+//SQLite data access object for Chord table
 @Dao
 public interface ChordDAO
 {

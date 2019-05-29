@@ -23,6 +23,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+
+//fragment to display list of chords
 public class Chords extends Fragment
 {
     private ChordViewModel chordViewModel;
@@ -65,6 +67,8 @@ public class Chords extends Fragment
             chordViewModel.getChordList(notes[i]).observe(this, adapter::setChords);
         }
 
+
+// simplified version of cycle above. Left here for reuse in case the same logic will be necessary
 //        RecyclerView aChords = view.findViewById(R.id.aChordsList);
 //        RecyclerView bChords = view.findViewById(R.id.bChordsList);
 //        RecyclerView cChords = view.findViewById(R.id.cChordsList);
@@ -96,11 +100,7 @@ public class Chords extends Fragment
 //        eChords.setLayoutManager(new LinearLayoutManager(view.getContext()));
 //        fChords.setLayoutManager(new LinearLayoutManager(view.getContext()));
 //        gChords.setLayoutManager(new LinearLayoutManager(view.getContext()));
-//
-//
-//
-//
-//
+
 //
 //        // Add an observer on the LiveData returned by getChordList(char).
 //        // The onChanged() method fires when the observed data changes and the activity is

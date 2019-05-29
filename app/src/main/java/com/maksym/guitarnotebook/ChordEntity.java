@@ -6,6 +6,8 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+
+//SQLite thing for chord table
 @Entity (tableName = "chords_table")
 public class ChordEntity
 {
