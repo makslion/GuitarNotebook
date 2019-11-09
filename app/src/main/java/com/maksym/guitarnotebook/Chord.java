@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,19 +17,14 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLEncoder;
-
 //class  for Chord activity
 public class Chord extends AppCompatActivity
 {
     private TextView chordName;
-    private ImageView chordImage;
     private ChordViewModel chordViewModel;
+
+    private ViewPager chordVariants;
+    private String [] chordImagesAdress;
 
     public static final String EXTRA_CHORD_NAME = "ChordName";
 
@@ -46,8 +42,10 @@ public class Chord extends AppCompatActivity
             getSupportActionBar().setTitle("Chord");
         }
 
+        chordVariants = findViewById(R.id.chordVariations);
+
+
         chordName = findViewById(R.id.chordName);
-        chordImage = findViewById(R.id.chordImage);
 
         chordViewModel = ViewModelProviders.of(this).get(ChordViewModel.class);
         Intent it = getIntent();
@@ -58,18 +56,26 @@ public class Chord extends AppCompatActivity
 
             chordName.setText(chord);
 
-            chordViewModel.getChordAddress(chord).observe(this, new Observer<String>() {
-                @Override
-                public void onChanged(@Nullable String s) {
-                    new DownLoadImageTask(chordImage).execute(s);
-                    Log.d("Chord", s);
-                }
-            });
+            fillChordImages(ChordImages.getImages(chord));
+
+//            chordViewModel.getChordAddress(chord).observe(this, new Observer<String>() {
+//                @Override
+//                public void onChanged(@Nullable String s) {
+//                    //new DownLoadImageTask(chordImage).execute(s);
+//                    Log.d("Chord", s);
+//                }
+//            });
         }
 
     }
 
 
+    private void fillChordImages(String [] images)
+    {
+        DetailsViewPagerAdapter adapter = new DetailsViewPagerAdapter(this);
+        adapter.setImages(images);
+        chordVariants.setAdapter(adapter);
+    }
 
     //implement up button action
     @Override
@@ -83,44 +89,44 @@ public class Chord extends AppCompatActivity
 
 
 
-    private class DownLoadImageTask extends AsyncTask<String,Void,Bitmap>
-    {
-        ImageView imageView;
-
-        public DownLoadImageTask(ImageView imageView)
-        {
-            this.imageView = imageView;
-        }
-
-        /*
-            doInBackground(Params... params)
-                Override this method to perform a computation on a background thread.
-         */
-        protected Bitmap doInBackground(String...urls)
-        {
-            String urlOfImage = urls[0];
-            Bitmap logo = null;
-            try{
-                InputStream is = new URL(urlOfImage).openStream();
-                /*
-                    decodeStream(InputStream is)
-                        Decode an input stream into a bitmap.
-                 */
-                logo = BitmapFactory.decodeStream(is);
-            }catch(Exception e){ // Catch the download exception
-                e.printStackTrace();
-            }
-            return logo;
-        }
-
-        /*
-            onPostExecute(Result result)
-                Runs on the UI thread after doInBackground(Params...).
-         */
-        protected void onPostExecute(Bitmap result){
-            imageView.setImageBitmap(result);
-        }
-    }
+//    private class DownLoadImageTask extends AsyncTask<String,Void,Bitmap>
+//    {
+//        ImageView imageView;
+//
+//        public DownLoadImageTask(ImageView imageView)
+//        {
+//            this.imageView = imageView;
+//        }
+//
+//        /*
+//            doInBackground(Params... params)
+//                Override this method to perform a computation on a background thread.
+//         */
+//        protected Bitmap doInBackground(String...urls)
+//        {
+//            String urlOfImage = urls[0];
+//            Bitmap logo = null;
+//            try{
+//                InputStream is = new URL(urlOfImage).openStream();
+//                /*
+//                    decodeStream(InputStream is)
+//                        Decode an input stream into a bitmap.
+//                 */
+//                logo = BitmapFactory.decodeStream(is);
+//            }catch(Exception e){ // Catch the download exception
+//                e.printStackTrace();
+//            }
+//            return logo;
+//        }
+//
+//        /*
+//            onPostExecute(Result result)
+//                Runs on the UI thread after doInBackground(Params...).
+//         */
+//        protected void onPostExecute(Bitmap result){
+//            imageView.setImageBitmap(result);
+//        }
+//    }
 }
 
 

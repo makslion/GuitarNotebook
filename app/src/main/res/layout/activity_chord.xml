@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:textSize="36sp" />
 
-    <ImageView
-        android:id="@+id/chordImage"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/chordVariations"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/chordImageDescription"
-        app:srcCompat="@android:drawable/stat_notify_error" />
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 </LinearLayout>
